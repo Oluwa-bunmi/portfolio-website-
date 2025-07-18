@@ -9,11 +9,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { projects } from "@/constants";
 import { Github, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { projects } from "@/constants";
 
 const Projects = () => {
   const container = {
@@ -40,16 +40,26 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#F7F9FC]">
+    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-900 mb-4">
+          <motion.h2
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ type: "spring", duration: 1 }}
+            className="text-4xl font-bold text-white mb-4"
+          >
             My Projects
-          </h2>
-          <p className="text-xl text-slate-600">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ type: "spring", duration: 0.5, delay: 0.3 }}
+            className="text-xl text-gray"
+          >
             Here are some of my recent projects that showcase my skills and
             experience.
-          </p>
+          </motion.p>
         </div>
         <motion.div
           variants={container}
