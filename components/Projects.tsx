@@ -9,7 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Github, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -25,7 +25,7 @@ const Projects = () => {
         delayChildren: 0.2,
         staggerChildren: 0.4,
         duration: 0.3,
-        type: "spring",
+        type: "spring" as const,
       },
     },
   };
@@ -35,7 +35,7 @@ const Projects = () => {
       y: 0,
       opacity: 1,
       duration: 2,
-      type: "spring",
+      type: "spring" as const,
     },
   };
 

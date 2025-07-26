@@ -14,7 +14,7 @@ const Skills=() => {
         delayChildren: 0.2,
         staggerChildren: 0.4,
         duration: 0.3,
-        type: "spring",
+        type: "spring" as const,
       },
     },
   };
@@ -24,7 +24,7 @@ const Skills=() => {
       y: 0,
       opacity: 1,
       duration: 2,
-      type: "spring",
+      type: "spring" as const,
     },
   };
 
@@ -50,17 +50,16 @@ const Skills=() => {
             Technologies I work with to bring ideas to life.
           </motion.p>
         </div>
-        <div
+        <motion.div
           variants={container}
           initial="hidden"
           whileInView="visible"
-          // viewport={{ once: true }}
+          viewport={{ once: true }}
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8"
         >
           {skills.map((skill, index) => (
             <motion.div variants={itemdisplay} key={index}>
               <Card
-                // key={index}
                 className="text-center p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
               >
                 <CardContent className="flex flex-col items-center space-y-4 p-0">
@@ -74,7 +73,7 @@ const Skills=() => {
               </Card>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

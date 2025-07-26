@@ -59,20 +59,11 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="hidden md:flex">
-            {/* <Button
-              onClick={handleResumeDownload}
-              variant="outline"
-              size="lg"
-              className="cursor-pointer"
-            >
-              <Download className="w-4 h-4 mr-2" />
-              Resume
-            </Button> */}
             <button
-              className="bg-gradient-orange py-3 px-[40px] rounded-md text-white text-base font-bold cursor-pointer"
+              className="flex items-center gap-2 whitespace-nowrap bg-logoGradient py-3 px-[40px] rounded-md text-white text-base font-bold cursor-pointer"
               onClick={handleResumeDownload}
             >
-              Resume
+              <Download className="w-5 h-5" /> Resume
             </button>
           </div>
 
@@ -82,6 +73,7 @@ const Navbar = () => {
           >
             <Menu className="text-white" />
           </div>
+          {/* Mobile nav */}
           {nav && (
             <div className="bg-black/80 fixed w-full h-screen left-0 top-0 z-10"></div>
           )}
@@ -95,7 +87,10 @@ const Navbar = () => {
             <nav>
               <div className="flex flex-col p-5 gap-5">
                 <div className="flex justify-end my-4">
-                  <X onClick={() => setNav(!nav)} className="cursor-pointer" />
+                  <X
+                    onClick={() => setNav(!nav)}
+                    className="cursor-pointer text-white"
+                  />
                 </div>
                 <Link
                   href="#about"
@@ -133,15 +128,12 @@ const Navbar = () => {
                   Contact
                 </Link>
                 <button
-                  className="w-fit bg-logoGradient py-3 px-[40px] rounded-md text-white text-base font-bold cursor-pointer"
+                  className="flex items-center gap-2 whitespace-nowrap w-fit bg-logoGradient py-3 px-[40px] rounded-md text-white text-base font-bold cursor-pointer"
                   onClick={handleResumeDownload}
                 >
+                  <Download className="w-5 h-5" />
                   Resume
                 </button>
-                {/* <Button variant="outline" size="lg" className="cursor-pointer">
-                <Download className="w-4 h-4 mr-2" />
-                Resume
-              </Button> */}
               </div>
             </nav>
           </div>

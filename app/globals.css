@@ -1,6 +1,13 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+
+*{
+  scroll-behavior: smooth !important;
+}
+.active{
+  color: red;
+}
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -119,7 +126,6 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-lato);
-    scroll-behavior: smooth;
   }
 }
 @theme {

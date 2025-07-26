@@ -40,10 +40,6 @@ const Hero = () => {
             >
               I help founders deliver better user experiences by building fast,
               responsive, and intuitive web interfaces.
-              {/* I'm a passionate frontend developer who loves creating functional
-              and user-friendly web applications. */}
-              {/* Every line of code I write is
-              aimed at solving real user problems. */}
             </motion.p>
             <motion.div
               initial={{ opacity: 0, scale: 0.5 }}

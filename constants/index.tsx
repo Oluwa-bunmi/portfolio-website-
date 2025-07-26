@@ -250,7 +250,7 @@ export const projects = [
   {
     title: "Hilink",
     description:
-      "A Modern travel app landing page with sleek UI and smooth animations.",
+      "A responsive modern travel app landing page with sleek UI",
     image: "/hilink.png",
     tags: ["Next.js", "TypeScript", "TailwindCSS", "Framer Motion"],
 

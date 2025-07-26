@@ -1,9 +1,31 @@
 "use client";
 
-import {motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { services } from "@/constants";
 
 const About = () => {
+  const container = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.2,
+        staggerChildren: 0.4,
+        duration: 0.3,
+        type: "spring" as const,
+      },
+    },
+  };
+  const itemdisplay = {
+    hidden: { y: 60, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      duration: 2,
+      type: "spring" as const,
+    },
+  };
   return (
     <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
       <div className="max-w-6xl mx-auto">
@@ -14,7 +36,7 @@ const About = () => {
             transition={{ type: "spring", duration: 1 }}
             className="text-4xl font-bold text-white mb-4"
           >
-           Services
+            Services
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
@@ -26,51 +48,15 @@ const About = () => {
             users, and your goals.
           </motion.p>
         </div>
-        <div className="grid md:grid-cols-3 gap-8">
-          {/* <Card className="text-center p-6 hover:shadow-lg transition-shadow">
-            <CardHeader>
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Globe className="w-6 h-6 text-blue-600" />
-              </div>
-              <CardTitle>Web Development</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-slate-600">
-                I build modern web applications with React, Next.js, and
-                TypeScript.
-              </p>
-            </CardContent>
-          </Card>
-          <Card className="text-center p-6 hover:shadow-lg transition-shadow">
-            <CardHeader>
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Smartphone className="w-6 h-6 text-green-600" />
-              </div>
-              <CardTitle>Responsive Design</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-slate-600">
-                I create pixel-perfect, mobile-first designs that work on all
-                devices.
-              </p>
-            </CardContent>
-          </Card>
-          <Card className="text-center p-6 hover:shadow-lg transition-shadow">
-            <CardHeader>
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Code className="w-6 h-6 text-purple-600" />
-              </div>
-              <CardTitle>Clean Code</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-slate-600">
-                I write maintainable, scalable code following industry best
-                practices.
-              </p>
-            </CardContent>
-          </Card> */}
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          className="grid md:grid-cols-3 gap-8"
+        >
           {services.map((service, index) => (
-            <div
+            <motion.div
+              variants={itemdisplay}
               key={index}
               className="bg-cardBg text-center p-[34px] rounded-3xl"
             >
@@ -79,9 +65,9 @@ const About = () => {
                 {service.heading}
               </h3>
               <p className="text-gray-400">{service.description}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
