@@ -8,7 +8,6 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
 
   const handleResumeDownload = () => {
-    // Create a link element and trigger download
     const link = document.createElement("a");
     link.href = "/resume.pdf";
     link.download = "Oluwabunmi Gbemisoye-Frontend Developer.pdf";
