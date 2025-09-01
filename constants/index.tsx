@@ -212,6 +212,24 @@ export const services = [
 ];
 export const projects = [
   {
+    title: "Poisera Nutrition",
+    description:
+      "A nutrition platform providing therapy, wellness, and school programs by registered dietitians",
+    image: "/poisera.png",
+    tags: ["React", "Vite", "Tailwind CSS", "Axios"],
+
+    live: "https://poiseranutrition.com/",
+  },
+  {
+    title: "Savey Africa",
+    description:
+      "A fintech platform helping individuals stay accountable to their budgets and financial goals",
+    image: "/savey.png",
+    tags: ["React", "Tailwind CSS", "Chakra-UI", "Framer Motion"],
+
+    live: "https://getsavey.com/",
+  },
+  {
     title: "Techlab",
     description:
       "A responsive company website showcasing their services, projects, and contact page.",
@@ -223,21 +241,14 @@ export const projects = [
   {
     title: "GetLinked",
     description:
-      "Multipage hackathon site with registration, rules, rewards, and contact form. Features smooth animations and a complex design brought to life with precision.",
+      "A multipage hackathon website with registration, rules, rewards, and contact form for participants",
+      //  Features smooth animations and a complex design brought to life with precision.
     image: "/getlinked.png",
     tags: ["React", "Vite", "Axios", "Tailwind CSS", "Framer Motion"],
 
     live: "https://get-linked-by-bunmi.vercel.app/",
   },
-  {
-    title: "Savey Africa",
-    description:
-      "Multipage website built to showcase the company’s mission to promote financial freedom.",
-    image: "/savey.png",
-    tags: ["React", "Tailwind CSS", "Chakra-UI", "Framer Motion"],
 
-    live: "https://getsavey.com/",
-  },
   {
     title: "Archi",
     description:
@@ -247,20 +258,19 @@ export const projects = [
 
     live: "https://archihotel.netlify.app/",
   },
-  {
-    title: "Hilink",
-    description:
-      "A responsive modern travel app landing page with sleek UI",
-    image: "/hilink.png",
-    tags: ["Next.js", "TypeScript", "TailwindCSS", "Framer Motion"],
+  // {
+  //   title: "Hilink",
+  //   description: "A responsive modern travel app landing page with sleek UI",
+  //   image: "/hilink.png",
+  //   tags: ["Next.js", "TypeScript", "TailwindCSS", "Framer Motion"],
 
-    live: "#",
-  },
+  //   live: "#",
+  // },
   {
     title: "TechBridge",
     description:
-      "Learning platform with course pages, auth interfaces, FAQs, and an about page for aspiring tech students. (project still in progress)",
-    image: "/tbc.png",
+      "Online learning platform for tech courses (in progress)",
+      image: "/tbc.png",
     tags: ["React", "Vite", "TailwindCSS"],
     live: "https://tech-bridge.vercel.app/",
   },
